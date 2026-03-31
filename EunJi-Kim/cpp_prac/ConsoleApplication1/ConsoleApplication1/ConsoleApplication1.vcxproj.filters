@@ -16,6 +16,9 @@
     <Filter Include="헤더 파일\0x03">
       <UniqueIdentifier>{b3ce757b-0bdf-4993-b1b9-4406ae49c5dc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\0x04">
+      <UniqueIdentifier>{5d6d294d-4ee4-4e32-b886-31387c7da20e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -25,6 +28,9 @@
   <ItemGroup>
     <ClInclude Include="array_test.h">
       <Filter>헤더 파일\0x03</Filter>
+    </ClInclude>
+    <ClInclude Include="linked_list_test.h">
+      <Filter>헤더 파일\0x04</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
