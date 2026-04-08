@@ -88,7 +88,46 @@ for island in island_li:
                 cnt += 1
                 ni += di
                 nj += dj
-                
-print(bridges)
 
-print() # 다리 길이 최소 / 불가능은 -1
+
+
+# 3. 크루스칼 알고리즘을 위한 준비
+# island_num만큼 부모 리스트 생성 (각 섬의 '대장' 저장)
+parent = [i for i in range(island_num + 1)]
+
+def find(x):
+    if parent[x] == x:
+        return x
+    
+    parent[x] = find(parent[x])
+    return parent[x]
+
+
+def union(a, b):
+    root_a = find(a)
+    root_b = find(b)
+    if root_a != root_b:
+        parent[root_b] = root_a
+        return True
+    return False
+
+
+# 4. 다리 정렬 및 연결
+bridges.sort()
+
+total_length = 0
+bridge_count = 0
+
+for length, start, end in bridges:
+    if union(start, end):
+        total_length += length
+        bridge_count += 1
+
+
+# 5. 최종 결과 출력
+# 모든 섬이 연결되려면 필요한 다리 수는 (섬의 개수 - 1)개
+if island_num > 0 and bridge_count == island_num - 1:
+    print(total_length)
+else:
+    print(-1)
+

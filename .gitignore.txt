@@ -1,0 +1,30 @@
+# --- Visual Studio 빌드 결과물 ---
+Debug/
+Release/
+x64/
+x86/
+bin/
+obj/
+
+# --- VS 개인 설정 및 캐시 (가장 용량 많이 차지함) ---
+.vs/
+*.user
+*.suo
+*.v12.suo
+*.v15.suo
+
+# --- 컴파일러가 만드는 임시 파일 ---
+*.aps
+*.pdb
+*.ilk
+*.idb
+*.exp
+*.res
+*.pch
+*.ipch
+*.tlog
+*.lastbuildstate
+*.log
+
+# --- 외부 라이브러리 및 패키지 ---
+packages/
