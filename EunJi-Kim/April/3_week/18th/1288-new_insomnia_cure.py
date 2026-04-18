@@ -18,11 +18,13 @@ for tc in range(1, T + 1):
     
     cnt = 0
     find = 0
-    while (find & NUMS) != NUMS:
+    while 1:
         cnt += 1
         str_N = str(cnt * N)
         for c in str_N:
             find |= 1 << int(c)
 
-
-    print(f'#{tc}', cnt)
+        if (find & NUMS) == NUMS:
+            print(f'#{tc}', str_N)
+            break
+    
