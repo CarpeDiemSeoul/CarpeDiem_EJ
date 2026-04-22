@@ -44,7 +44,7 @@ def prim(start_node):
 
 
 V, E = map(int, input().split())
-graph = [[] * V for _ in range(V)]
+graph = [[] for _ in range(V)]
 
 for _ in range(E):
     s, e, w = map(int, input().split())
